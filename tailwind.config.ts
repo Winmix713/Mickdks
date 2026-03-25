@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
+  darkMode: "class",
   content: ["./client/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
@@ -12,7 +12,18 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
     extend: {
+      spacing: {
+        xs: "4px",
+        sm: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "24px",
+        "2xl": "32px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -84,6 +95,12 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        "dot-grid": "radial-gradient(circle, hsl(var(--dot-grid)) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "dot-grid": "16px 16px",
       },
     },
   },
